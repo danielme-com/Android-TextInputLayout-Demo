@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">TextInputLayout Demo</string>
+    <string name="email">Email</string>
+    <string name="text">Text</string>
+    <string name="password">Password</string>
+    <string name="validate">Validate</string>
+    <string name="mandatory">This field is mandatory</string>
+    <string name="outlined">Outlined mode</string>
+</resources>

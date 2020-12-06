@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="primary" type="color">#9a28a1</item>
+    <item name="primaryDark" type="color">#5c1760</item>
+    <item name="indigo" type="color">#303F9F</item>
+    <item name="teal" type="color">#009688</item>
+    <item name="orange" type="color">#FF5722</item>
+</resources>

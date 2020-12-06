@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <!--toolbar, primaryColor en tema claro, surfaceColor en tema oscuro-->
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+        <!-- aplica un tema personalizado a todos los TextInputLayout de la app-->
+        <!--<item name="textInputStyle">@style/AppTheme.TextInputLayout</item>-->
+        <item name="errorTextColor">@color/orange</item>
+    </style>
+
+    <style name="AppTheme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- línea inferior con texto-->
+        <item name="boxStrokeColor">@color/indigo</item>
+        <!-- el color de relleno, por defecto es colorOnSurface-->
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <!-- el hint cuando el campo está vacio y sin foco-->
+        <item name="android:textColorHint">@color/teal</item>
+        <!-- el hint cuando se convierte en etiqueta flotante-->
+        <item name="hintTextColor">@color/orange</item>
+    </style>
+
+    <!-- mensaje de error debajo del EditText-->
+    <style name="AppTheme.EditTextError" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="errorTextColor">@color/orange</item>
+    </style>
+
+</resources>
