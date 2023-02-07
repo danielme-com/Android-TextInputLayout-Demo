@@ -26,13 +26,21 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    Toolbar toolbar = findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
+    setupToolbar();
 
+    bindViews();
+  }
+
+  private void bindViews() {
     editTextEmail = findViewById(R.id.editTextEmail);
     editTextPassword = findViewById(R.id.editTextPassword);
     textInputEmail = findViewById(R.id.text_input_layout_email);
     textInputPassword = findViewById(R.id.text_input_layout_pass);
+  }
+
+  private void setupToolbar() {
+    Toolbar toolbar = findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
   }
 
   public void validate(View view) {
