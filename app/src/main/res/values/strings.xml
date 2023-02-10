@@ -8,4 +8,7 @@
     <string name="validate">Validate</string>
     <string name="mandatory">This field is mandatory</string>
     <string name="outlined">Outlined mode</string>
+    <string name="clear">Clear icon</string>
+    <string name="custom_action">Custom action</string>
+    <string name="help_message">You asked for help, but I\'m not helpful</string>
 </resources>

@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
   private TextInputEditText editTextPassword;
   private TextInputLayout textInputEmail;
   private TextInputLayout textInputPassword;
+  private TextInputLayout textInputHelp;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
     editTextPassword = findViewById(R.id.editTextPassword);
     textInputEmail = findViewById(R.id.text_input_layout_email);
     textInputPassword = findViewById(R.id.text_input_layout_pass);
+    ((TextInputLayout) findViewById(R.id.text_input_layout_help)).setEndIconOnClickListener(v -> {
+      Toast.makeText(this, R.string.help_message, Toast.LENGTH_LONG).show();
+    });
+
   }
 
   private void setupToolbar() {

@@ -93,6 +93,44 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/form_margin_top"
+        android:hint="@string/clear"
+        app:endIconMode="clear_text"
+        app:expandedHintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_outlined"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
+        app:layout_constraintStart_toStartOf="@+id/text_input_layout_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_help"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/form_margin_top"
+        android:hint="@string/custom_action"
+        app:endIconDrawable="@android:drawable/ic_menu_help"
+        app:endIconMode="custom"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_clear"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
+        app:layout_constraintStart_toStartOf="@+id/text_input_layout_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextToast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/buttonValidate"
             android:layout_width="0dp"
@@ -102,6 +140,6 @@
             android:text="@string/validate"
             app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
             app:layout_constraintStart_toStartOf="@+id/text_input_layout_email"
-            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_outlined"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_help"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
