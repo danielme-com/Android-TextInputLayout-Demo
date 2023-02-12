@@ -1,145 +1,161 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:context=".MainActivity">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       />
+        />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout_email"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/form_margin_top"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:hint="@string/email"
-            app:startIconDrawable="@drawable/baseline_email_black_24"
-            app:startIconTint="@drawable/leading_icon_selector"
-            style="@style/AppTheme.TextInputLayout"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+            android:orientation="vertical"
+          >
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextEmail"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                />
+                android:layout_marginTop="@dimen/form_margin_top"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:hint="@string/email"
+                app:startIconDrawable="@drawable/baseline_email_black_24"
+                app:startIconTint="@drawable/leading_icon_selector"
+                style="@style/AppTheme.TextInputLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout_pass"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/form_margin_top"
-            android:hint="@string/password"
-            app:passwordToggleEnabled="true"
-            style="@style/AppTheme.EditTextError"
-            app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
-            app:layout_constraintStart_toStartOf="@+id/text_input_layout_email"
-            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_email">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextPassword"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_pass"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:layout_marginTop="@dimen/form_margin_top"
+                android:hint="@string/password"
+                app:passwordToggleEnabled="true"
+                style="@style/AppTheme.EditTextError"
+                app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
+                app:layout_constraintStart_toStartOf="@+id/text_input_layout_email"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_email">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout_char"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/form_margin_top"
-            android:hint="@string/text"
-            app:counterEnabled="true"
-            app:counterMaxLength="10"
-            app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
-            app:layout_constraintStart_toStartOf="@+id/text_input_layout_email"
-            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_pass">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_char"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_margin_top"
+                android:hint="@string/text"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
+                app:layout_constraintStart_toStartOf="@+id/text_input_layout_email"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_pass">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout_outlined"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/form_margin_top"
-            android:hint="@string/outlined"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_char"
-            app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
-            app:layout_constraintStart_toStartOf="@+id/text_input_layout_email">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextOutlined"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_margin_top"
+                android:hint="@string/outlined"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_char"
+                app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
+                app:layout_constraintStart_toStartOf="@+id/text_input_layout_email">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextOutlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_clear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/form_margin_top"
-        android:hint="@string/clear"
-        app:endIconMode="clear_text"
-        app:expandedHintEnabled="false"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_outlined"
-        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
-        app:layout_constraintStart_toStartOf="@+id/text_input_layout_email">
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextClear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_margin_top"
+                android:hint="@string/clear"
+                app:endIconMode="clear_text"
+                app:expandedHintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_outlined"
+                app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
+                app:layout_constraintStart_toStartOf="@+id/text_input_layout_email">
 
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_help"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/form_margin_top"
-        android:hint="@string/custom_action"
-        app:endIconDrawable="@android:drawable/ic_menu_help"
-        app:endIconMode="custom"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_clear"
-        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
-        app:layout_constraintStart_toStartOf="@+id/text_input_layout_email">
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextToast"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_help"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_margin_top"
+                android:hint="@string/custom_action"
+                app:endIconDrawable="@android:drawable/ic_menu_help"
+                app:endIconMode="custom"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_clear"
+                app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
+                app:layout_constraintStart_toStartOf="@+id/text_input_layout_email">
 
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextToast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/buttonValidate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/form_margin_top"
-            android:onClick="validate"
-            android:text="@string/validate"
-            app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
-            app:layout_constraintStart_toStartOf="@+id/text_input_layout_email"
-            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_help"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/buttonValidate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_margin_top"
+                android:onClick="validate"
+                android:text="@string/validate"
+                app:layout_constraintEnd_toEndOf="@+id/text_input_layout_email"
+                app:layout_constraintStart_toStartOf="@+id/text_input_layout_email"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_help"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
